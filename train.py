@@ -71,6 +71,6 @@ if __name__ == "__main__":
         "avg_rewards": avg_rewards,
         "avg_successes": avg_successes
     }
-    with open("results/train_results", "w") as train_results_file:
+    with open("results/train_results.json", "w") as train_results_file:
         train_results_file.write(json.dumps(train_results))
     dialogue_manager.save("models/Trained")

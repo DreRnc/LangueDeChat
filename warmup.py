@@ -49,7 +49,7 @@ if __name__ == "__main__":
         "avg_success": avg_success,
         "avg_reward": avg_reward
     }
-    with open("results/warmup_results", "w") as warmup_results_file:
+    with open("results/warmup_results.json", "w") as warmup_results_file:
         warmup_results_file.write(json.dumps(warmup_results))
     dialogue_manager.save("models/WarmedUp")
 
