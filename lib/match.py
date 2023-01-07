@@ -136,4 +136,3 @@ def get_conflict_keys(inform, context):
         elif not _match_lambda(inf_key, context, lambda x, y: x == y, inf_value):
             conflicting_keys.add(inf_key)
     return conflicting_keys
-

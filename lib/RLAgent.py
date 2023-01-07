@@ -58,7 +58,7 @@ class RLAgent:
         qnet_hidden_activation="relu",
         qnet_output_activation="linear",
         qnet_loss="MSE",
-        qnet_optimizer=Adam(learning_rate = 1e-3),
+        qnet_optimizer=Adam(learning_rate=1e-3),
         gamma=0.9,
         init_epsilon=0.1,
         epsilon_decay=0.9,

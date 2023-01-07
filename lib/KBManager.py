@@ -72,7 +72,7 @@ class KBManager:
         if not self._cache["documents"][hashable_constraints]:
             self._cache["documents"][hashable_constraints] = [
                 doc for doc in self._kb
-                if not get_conflict_keys(doc, constraints)
+                if not get_conflict_keys(constraints, doc)
             ]
         return self._cache["documents"][hashable_constraints]
 
@@ -167,7 +167,7 @@ class KBManager:
         
         constraint = {GOAL_KEY : goal_proposal}
         proposed_doc, = self.find_matching_docs(constraint)
-        return not get_conflict_keys(proposed_doc, constraints)
+        return not get_conflict_keys(constraints, proposed_doc)
 
 
     def get_kb_size(self):
