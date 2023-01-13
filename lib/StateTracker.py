@@ -216,7 +216,6 @@ class StateTracker:
             # to complete the action, given the state of the conversation.
             key = agent_action[1]
             self._curr_agt_inf.pop(key, None)
-            self._curr_usr_inf.pop(key, None)
             curr_constraints = self._curr_agt_inf | self._curr_usr_inf
             value = self._kb_manager.find_matching_value(key, curr_constraints)
             # If there are no matching values, if the agent has proposed
